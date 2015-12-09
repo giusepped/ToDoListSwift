@@ -35,6 +35,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE2-47-bXt">
                                         <rect key="frame" x="0.0" y="75" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heu-PD-qu6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -48,6 +51,9 @@
                             <constraint firstItem="vRk-O7-5Gc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="r0x-98-Oyv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="toDoTextField" destination="UBj-3R-qtt" id="iVC-Ue-1fs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

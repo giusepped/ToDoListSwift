@@ -9,7 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var toDoTextField: UITextField!
+    
+    var toDoArray : [String] = []
 
+    func addStringToArray(toDoString : String) { toDoArray.append(toDoString)
+    }
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        let toDoText = toDoTextField.text
+        addStringToArray(toDoText!)
+        print(toDoArray)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
