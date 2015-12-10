@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func saveButtonTapped(sender: AnyObject) {
         let toDoText = toDoTextField.text
         addStringToArray(toDoText!)
+        toDoTextField.text = ""
     }
     
     @IBOutlet weak var tableView: UITableView!
