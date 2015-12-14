@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ToDo: UITableViewCell {
+class ToDoCell: UITableViewCell {
 
     @IBOutlet weak var toDoCellLabel: UILabel!
      
+    @IBOutlet weak var doneLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,6 +23,11 @@ class ToDo: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func displayTask(task:Task) {
+        toDoCellLabel.text = task.name
+        toDoCellLabel.textColor = task.status ? UIColor.grayColor() : UIColor.blackColor()
     }
 
 }

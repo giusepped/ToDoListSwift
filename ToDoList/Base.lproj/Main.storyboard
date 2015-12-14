@@ -22,7 +22,10 @@
                                 <rect key="frame" x="20" y="20" width="560" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you doing today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7a-hr-I0a">
-                                        <rect key="frame" x="0.0" y="0.0" width="205" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="0Qn-E3-nyw"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -33,19 +36,25 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE2-47-bXt">
-                                        <rect key="frame" x="0.0" y="75" width="34" height="30"/>
+                                        <rect key="frame" x="0.0" y="75" width="560" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heu-PD-qu6"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Z7a-hr-I0a" firstAttribute="centerX" secondItem="vRk-O7-5Gc" secondAttribute="centerX" id="96I-pp-5pI"/>
+                                    <constraint firstItem="Z7a-hr-I0a" firstAttribute="top" secondItem="vRk-O7-5Gc" secondAttribute="top" constant="80" id="QsO-d1-Frp"/>
+                                    <constraint firstItem="cE2-47-bXt" firstAttribute="centerX" secondItem="vRk-O7-5Gc" secondAttribute="centerX" id="aRa-3u-N4g"/>
+                                    <constraint firstItem="Z7a-hr-I0a" firstAttribute="centerX" secondItem="vRk-O7-5Gc" secondAttribute="centerX" id="s68-yW-9kz"/>
+                                </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="blK-hW-q5p">
                                 <rect key="frame" x="20" y="147" width="560" height="433"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDo" id="fFZ-E0-jBk" customClass="ToDo" customModule="ToDoList">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="fFZ-E0-jBk" customClass="ToDoCell" customModule="ToDoList">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fFZ-E0-jBk" id="qEf-C0-6rt">
@@ -53,7 +62,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yD-Vy-OMi">
-                                                    <rect key="frame" x="21" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="21" y="11" width="531" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
